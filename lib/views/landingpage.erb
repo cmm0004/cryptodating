@@ -67,22 +67,25 @@
                 <h1>Dating by the Numbers</h1>
                 <h3>Don't give a fake number, encrypt it!</h3>
                 <p class="lead">This will create a PDF of your encrypted number as a business card for you to take to a printer, if your number is 555-867-5309, then input as shown.</p>
-              <form class="form-inline">
+              <form class="form-inline" action="/" method="post">
+                <div class="form-group">
+                  <label class="sr-only" for="area_code">Name</label>
+                  <input name="name" type="text" class="form-control" id="name" placeholder="Name (Optional)">
+                </div>
                 <div class="form-group">
                   <label class="sr-only" for="area_code">Area Code</label>
-                  <input type="text" class="form-control" id="area_code" placeholder="555">
+                  <input name="area_code" type="text" class="form-control" id="area_code" placeholder="555" required>
                 </div>
                 <div class="form-group">
                   <label class="sr-only" for="first_three">Password</label>
-                  <input type="text" class="form-control" id="first_three" placeholder="867">
+                  <input name="first_three" type="text" class="form-control" id="first_three" placeholder="867" required>
                 </div>
                 <div class="form-group">
                   <label class="sr-only" for="last_four">Password</label>
-                  <input type="text" class="form-control" id="last_four" placeholder="5309">
+                  <input name="last_four" type="text" class="form-control" id="last_four" placeholder="5309" required>
                 </div>
                 <button type="submit" class="btn btn-default">Encrypt!</button>
               </form>
-
             </div>
         </div>
     </header>
@@ -94,7 +97,7 @@
 
         <!-- First Featurette -->
         <div class="featurette">
-            <img class="featurette-image img-circle img-responsive pull-right" src="imgs/awkwardgif.gif">
+            <img class="featurette-image img-rounded img-responsive pull-right" src="imgs/kanye-confused.gif">
             <h2 class="featurette-heading">Call Me... Maybe?
                 <span class="text-muted">Make Your Phone Number a Puzzle</span>
             </h2>
@@ -107,7 +110,7 @@
 
         <!-- Second Featurette -->
         <div class="featurette" id="how">
-            <img class="featurette-image img-circle img-responsive pull-left" src="imgs/flirtygif.gif">
+            <img class="featurette-image img-rounded img-responsive pull-left" src="imgs/flirtygif.gif">
             <h2 class="featurette-heading">Its a Math Puzzle in a Calling Card
                 <span class="text-muted">Just Input Your Phone Number & Get the PDF</span>
             </h2>
@@ -117,16 +120,27 @@
               I'm a software developer, not a security expert, and I don't want the trouble.</p>
         </div>
 
+      <div class="featurette">
+        <img class="featurette-image img-rounded img-responsive pull-right" src="http://placehold.it/500x500">
+        <h2 class="featurette-heading">Input number, press button.
+          <span class="text-muted">Get redirected to a pdf document that will look an awful lot like this.</span>
+        </h2>
+        <p class="lead">This is a two sided business card at 300 dpi, one color. Just download it and take it to a printer or print it out
+        at home and have your own CryptoDating cards! The name on the front is optional, if you decline to input a name, a blank line is
+         rendered instead, so you can write any name you like. This example is the number 555-867-5309</p>
+      </div>
+
         <hr class="featurette-divider">
 
       <!-- Third Featurette -->
       <div class="featurette" id="why">
-        <img class="featurette-image img-circle img-responsive pull-right" src="imgs/poison.jpg">
+        <img class="featurette-image img-rounded img-responsive pull-right" src="imgs/poison.jpg">
         <h2 class="featurette-heading">Is This Great or What?
           <span class="text-muted">If you really like it, you can donate to the creator!</span>
         </h2>
         <p class="lead">I set it up for free because I like fun things, but I do appreciate the coffee-money,
           since most of my non-work related development is done with a cup of poison in my local Starbucks.</p>
+        <p class="lead">Want to see the code? <a href="https://github.com/cmm0004/cryptodating">Check it out on github.</a></p>
       </div>
 
       <hr class="featurette-divider">
