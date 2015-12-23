@@ -7,7 +7,7 @@ module Cryptodating
     def self.doit(digits={})
       Prawn::Document.generate "./public/example.pdf", :page_size => BUSINESS_CARD_300PPI do |pdf|
 
-        pdf.image "./public/imgs/pdfimgs/front.jpg", :at => [0, Y-25]
+        pdf.image "./public/imgs/pdfimgs/front.jpg", :at => [-25, Y-25]
         pdf.font "Helvetica"
         # pdf.draw_text "Hey!", :at => [50,Y-150], :size => 100
         # pdf.draw_text "My Name's", :at => [50,Y-350], :size => 72

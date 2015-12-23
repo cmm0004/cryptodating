@@ -5,4 +5,3 @@ gem 'thin'
 
 gem 'dotenv'
 gem 'prawn'
-
