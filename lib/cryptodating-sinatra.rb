@@ -23,6 +23,14 @@ module Cryptodating
       # first_three = params[:first_three]
       # last_four = params[:last_four]
 
+      # area_code = params[:area_code].to_i
+      params[:area_code] = MathHelpers::doit(params[:area_code])
+
+       # first_three = params[:first_three].to_i
+      params[:first_three] = MathHelpers::doit(params[:first_three])
+
+      # last_four = params[:last_four].to_i
+      params[:last_four] = MathHelpers::doit(params[:last_four])
       PDFHelpers::doit(params)
 
       # erb :test, locals: {area_code: area_code, first_three: first_three, last_four: last_four}

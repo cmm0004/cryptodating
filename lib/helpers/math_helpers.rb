@@ -2,8 +2,13 @@ module Cryptodating
   BASE = 25
   module MathHelpers
 
-    def self.doit number
+    def self.doit string
+
       array_of_number = []
+      if leading_zero?(string)
+        array_of_number.push(0)
+      end
+      number = string.to_i
       digit = determine_digits(number)
       until digit < 0
         base25numb = number / (BASE ** digit)
@@ -26,6 +31,14 @@ module Cryptodating
           digit += 1
         end
         return (digit - 2)
+      end
+
+      def self.leading_zero?(string)
+        if string[0] == '0'
+          return true
+        end
+
+        false
       end
   end
 end
