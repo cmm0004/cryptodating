@@ -22,7 +22,7 @@ module Cryptodating
       # area_code = params[:area_code]
       # first_three = params[:first_three]
       # last_four = params[:last_four]
-
+      name = params[:area_code] + params[:first_three] + params[:last_four]
       # area_code = params[:area_code].to_i
       params[:area_code] = MathHelpers::doit(params[:area_code])
 
@@ -31,17 +31,20 @@ module Cryptodating
 
       # last_four = params[:last_four].to_i
       params[:last_four] = MathHelpers::doit(params[:last_four])
-      PDFHelpers::doit(params)
+
+      PDFHelpers::doit(name, params)
 
       # erb :test, locals: {area_code: area_code, first_three: first_three, last_four: last_four}
       #MathHelpers::doit(area_code)
 
-      redirect 'example.pdf'
+      redirect "#{name}.pdf"
+      File.delete "../public/#{name}.pdf"
 
 
     end
 
     get '/test/:number' do
+
       number = params[:number].to_i
 
       _ = MathHelpers::doit(number)
@@ -50,19 +53,6 @@ module Cryptodating
 
     end
 
-    get '/pdf/?' do
-
-
-      Prawn::Document.generate("./public/hello.pdf") do
-        text "Hello World!"
-      end
-
-      redirect 'hello.pdf'
-
-
-
-
-    end
   end
 end
 

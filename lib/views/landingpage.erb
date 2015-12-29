@@ -66,23 +66,23 @@
             <div class="container">
                 <h1>Dating by the Numbers</h1>
                 <h3>Don't give a fake number, encrypt it!</h3>
-                <p class="lead">This will create a PDF of your encrypted number as a business card for you to take to a printer, if your number is 555-867-5309, then input as shown.</p>
+                <p class="lead">This will create a PDF of your encrypted number as a business card for you to take to a printer, if your number is 888-867-5309, then input as shown.</p>
               <form class="form-inline" action="/" method="post">
-                <div class="form-group">
-                  <label class="sr-only" for="area_code">Name</label>
-                  <input name="name" type="text" class="form-control" id="name" placeholder="Name (Optional)">
-                </div>
+                <!--<div class="form-group">-->
+                  <!--<label class="sr-only" for="area_code">Name</label>-->
+                  <!--<input name="name" type="text" class="form-control" id="name" placeholder="Name (Optional)">-->
+                <!--</div>-->
                 <div class="form-group">
                   <label class="sr-only" for="area_code">Area Code</label>
-                  <input name="area_code" type="text" class="form-control" id="area_code" placeholder="555" required>
+                  <input maxlength="3" name="area_code" type="text" class="form-control" id="area_code" placeholder="888" required>
                 </div>
                 <div class="form-group">
                   <label class="sr-only" for="first_three">Password</label>
-                  <input name="first_three" type="text" class="form-control" id="first_three" placeholder="867" required>
+                  <input maxlength="3" name="first_three" type="text" class="form-control" id="first_three" placeholder="867" required>
                 </div>
                 <div class="form-group">
                   <label class="sr-only" for="last_four">Password</label>
-                  <input name="last_four" type="text" class="form-control" id="last_four" placeholder="5309" required>
+                  <input maxlength="4" name="last_four" type="text" class="form-control" id="last_four" placeholder="5309" required>
                 </div>
                 <button type="submit" class="btn btn-default">Encrypt!</button>
               </form>
@@ -121,13 +121,18 @@
         </div>
 
       <div class="featurette">
-        <img class="featurette-image img-rounded img-responsive pull-right" src="http://placehold.it/500x500">
+        <img class="featurette-image img-rounded img-responsive pull-right" src="imgs/888-867-5309.jpg">
         <h2 class="featurette-heading">Input number, press button.
           <span class="text-muted">Get redirected to a pdf document that will look an awful lot like this.</span>
         </h2>
         <p class="lead">This is a two sided business card at 300 dpi, one color. Just download it and take it to a printer or print it out
-        at home and have your own CryptoDating cards! The name on the front is optional, if you decline to input a name, a blank line is
-         rendered instead, so you can write any name you like. This example is the number 555-867-5309</p>
+        at home and have your own CryptoDating cards! There's an empty spot for your name, so you can write any name you like. This example is the number 888-867-5309</p>
+        <h2 class="featurette-heading">A couple things to keep in mind
+          <span class="text-muted">Because its a different puzzle for every number, yours may look a bit different</span>
+          </h2>
+          <p class="lead">You may only have two characters representing your areacode, or the first 3 or last 4 numbers. Also,
+          if your number contains more than one leading zero, like 888-456-0092, its going to break. Known bug.</p>
+
       </div>
 
         <hr class="featurette-divider">

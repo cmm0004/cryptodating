@@ -6,7 +6,7 @@ module Cryptodating
 
       array_of_number = []
       if leading_zero?(string)
-        array_of_number.push(0)
+        array_of_number.push('_')
       end
       number = string.to_i
       digit = determine_digits(number)
