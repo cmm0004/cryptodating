@@ -22,7 +22,7 @@ module Cryptodating
       # area_code = params[:area_code]
       # first_three = params[:first_three]
       # last_four = params[:last_four]
-      name = params[:area_code] + params[:first_three] + params[:last_four]
+      pdf_name = params[:area_code] + params[:first_three] + params[:last_four]
       # area_code = params[:area_code].to_i
       params[:area_code] = MathHelpers::doit(params[:area_code])
 
@@ -32,13 +32,13 @@ module Cryptodating
       # last_four = params[:last_four].to_i
       params[:last_four] = MathHelpers::doit(params[:last_four])
 
-      PDFHelpers::doit(name, params)
+      PDFHelpers::doit(pdf_name, params)
 
       # erb :test, locals: {area_code: area_code, first_three: first_three, last_four: last_four}
       #MathHelpers::doit(area_code)
 
-      redirect "#{name}.pdf"
-      File.delete "../public/#{name}.pdf"
+      redirect "#{pdf_name}.pdf"
+      File.delete "../public/#{pdf_name}.pdf"
 
 
     end

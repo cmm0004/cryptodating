@@ -68,10 +68,10 @@
                 <h3>Don't give a fake number, encrypt it!</h3>
                 <p class="lead">This will create a PDF of your encrypted number as a business card for you to take to a printer, if your number is 888-867-5309, then input as shown.</p>
               <form class="form-inline" action="/" method="post">
-                <!--<div class="form-group">-->
-                  <!--<label class="sr-only" for="area_code">Name</label>-->
-                  <!--<input name="name" type="text" class="form-control" id="name" placeholder="Name (Optional)">-->
-                <!--</div>-->
+                <div class="form-group">
+                  <label class="sr-only" for="area_code">Name</label>
+                  <input maxlength="10" name="name" type="text" class="form-control" id="name" placeholder="Name (Optional)">
+                </div>
                 <div class="form-group">
                   <label class="sr-only" for="area_code">Area Code</label>
                   <input maxlength="3" name="area_code" type="text" class="form-control" id="area_code" placeholder="888" required>
