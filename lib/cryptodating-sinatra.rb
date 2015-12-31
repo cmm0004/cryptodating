@@ -17,9 +17,15 @@ module Cryptodating
 		end
 
     post '/' do
-      params = EndpointHelpers::format_post_params params
-      pdf_name = PDFHelpers::define_file params
-      PDFHelpers::render_pdf(pdf_name, params)
+
+      Dir.open("./public").each do |filename|
+        next if File.directory? filename
+          File.delete filename
+        end
+      end
+      pdf_name = PDFHelpers::define_file(params)
+      new_params = EndpointHelpers::format_post_params(params)
+      PDFHelpers::render_pdf(pdf_name, new_params)
 
       redirect "#{pdf_name}.pdf"
     end

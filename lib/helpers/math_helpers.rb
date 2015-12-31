@@ -2,11 +2,13 @@ module Cryptodating
   BASE = 25
   module MathHelpers
 
-    def self.doit string
-
+    #String -> []int
+    def self.convert_base string
       array_of_number = []
-      if leading_zero?(string)
+      leading_zeros = count_leading_zeros string
+      until leading_zeros == 0
         array_of_number.push('_')
+        leading_zeros -= 1
       end
       number = string.to_i
       digit = determine_digits(number)
@@ -23,6 +25,7 @@ module Cryptodating
 
     private
 
+      #int -> int
       def self.determine_digits(number)
         digit = 0
         remainder = -1
@@ -33,12 +36,26 @@ module Cryptodating
         return (digit - 2)
       end
 
+      #string -> bool
       def self.leading_zero?(string)
         if string[0] == '0'
           return true
         end
 
         false
+      end
+
+      #string => int
+      def self.count_leading_zeros string
+        puts string + 'has'
+        leading_zeros = 0
+        until string[0] != '0'
+            leading_zeros += 1
+            string = string[1..-1]
+        end
+        puts leading_zeros
+
+        leading_zeros
       end
   end
 end

@@ -5,6 +5,7 @@ module Cryptodating
     BUSINESS_CARD_300PPI = [X, Y]
 
     ## 45px on each side for standard bleed
+    #string, {}:sym
     def self.render_pdf(name, pdf_params={})
 
       Prawn::Document.generate "./public/#{name}.pdf", :page_size => BUSINESS_CARD_300PPI do |pdf|
