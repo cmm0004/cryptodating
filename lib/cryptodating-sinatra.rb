@@ -20,8 +20,7 @@ module Cryptodating
 
       Dir.open("./public").each do |filename|
         next if File.directory? filename
-          File.delete filename
-        end
+          File.delete("./public/#{filename}")
       end
       pdf_name = PDFHelpers::define_file(params)
       new_params = EndpointHelpers::format_post_params(params)
