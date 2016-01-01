@@ -4,6 +4,9 @@
 # This takes care of .tmp, .sass-cache, and many others #
 .*/
 
+#ignore generated pdfs from development
+public/*.pdf
+
 # Ignore OS generated files #
 .DS_Store*
 ehthumbs.db

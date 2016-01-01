@@ -1,6 +1,5 @@
 # Cryptodating.net
 
-
 ## Features to add
 
 - [x] 1/8inch standard bleed for easier printing.

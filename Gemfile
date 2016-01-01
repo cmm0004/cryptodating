@@ -5,3 +5,5 @@ gem 'thin'
 
 gem 'dotenv'
 gem 'prawn'
+
+gem 'rspec'

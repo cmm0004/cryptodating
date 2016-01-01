@@ -1,3 +1,5 @@
+require 'prawn'
+
 module Cryptodating
   module PDFHelpers
     X = 1102

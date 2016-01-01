@@ -17,7 +17,7 @@ module Cryptodating
 
     #string -> string
     def self.enforce_name_length name
-      name[0..10]
+      name[0..9]
     end
   end
 end

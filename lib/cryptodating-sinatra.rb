@@ -2,7 +2,6 @@ require 'sinatra'
 require './lib/helpers/math_helpers'
 require './lib/helpers/pdf_helper'
 require './lib/helpers/endpoint_helpers'
-require "prawn"
 
 module Cryptodating
 	class Application < Sinatra::Base
