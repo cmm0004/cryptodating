@@ -8,6 +8,7 @@ module Cryptodating
     include MathHelpers
     include PDFHelpers
     include EndpointHelpers
+
 		set :public_folder, 'public'
 
 
@@ -16,7 +17,6 @@ module Cryptodating
 		end
 
     post '/' do
-
       Dir.open("./public").each do |filename|
         next if File.directory? "./public/#{filename}"
         File.delete("./public/#{filename}")

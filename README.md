@@ -29,3 +29,4 @@ even though they both evaluate to 391, but I worry it would cause too much confu
   * no longer resetting the environment to remove the generated pdfs, just deleting before I make a new one. Probably a dangerous,
 but there's nothing to steal or break, if the app gets deleted, just reset the app server, and I dont save anything,
 so there's no user information.
+- [ ] possible to put letters in your number. Should stop that from happening.

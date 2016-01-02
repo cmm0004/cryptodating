@@ -18,7 +18,6 @@ module Cryptodating
         number -= (base25numb * (BASE ** digit))
         digit -= 1
       end
-      puts "#{array_of_number.inspect}"
       array_of_number
 
     end
@@ -47,14 +46,11 @@ module Cryptodating
 
       #string => int
       def self.count_leading_zeros string
-        puts string + 'has'
         leading_zeros = 0
         until string[0] != '0'
             leading_zeros += 1
             string = string[1..-1]
         end
-        puts leading_zeros
-
         leading_zeros
       end
   end
