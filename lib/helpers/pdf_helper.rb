@@ -55,7 +55,7 @@ module Cryptodating
         end
         pdf.start_new_page
 
-        pdf.image "./public/imgs/pdfimgs/back-3.1.jpg", :at => [-25 + ( bleed / 2), Y-40 + ( bleed / 2)]
+        pdf.image "./public/imgs/pdfimgs/back-22.jpg", :at => [-25 + ( bleed / 2), Y-40 + ( bleed / 2)]
       end
     end
 
